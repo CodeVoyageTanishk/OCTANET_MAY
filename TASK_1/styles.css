@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('gym_background.jpg');
+    background-size: cover;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 20px 0;
+    text-align: left;
+}
+
+header img {
+    width: 130px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.main-section {
+    background-color: rgba(255, 255, 255, 0.236);
+    padding: 50px 0;
+    text-align: center;
+}
+
+h2 {
+    color: #ff0000;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #e65041;
+}
+
+#membership-plans {
+    padding: 50px 0;
+}
+
+.plan {
+    background-color: #dbdada57;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.plan h3 {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
