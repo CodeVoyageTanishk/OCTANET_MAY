@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Caveat', cursive;
+  background-image: url('background.jpg');
+  background-size: cover;
+
+  color: #fff;
+  animation: fadeInBackground 2s ease;
+  animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: linear-gradient(135deg, #d4401b, #ba692bbe);
+    padding: 20px;
+    border-radius: 20px;
+    animation: fadeIn 1s ease, shimmer 2s infinite linear;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .container:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .input-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s, box-shadow 0.3s, color 0.3s;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 80%);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  button:hover::before {
+    transform: translate(-50%, -50%) scale(2);
+  }
+  
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px rgba(68, 128, 255, 0.5), 0 0 20px rgba(68, 128, 255, 0.5), 0 0 30px rgba(68, 128, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(68, 128, 255, 0.5), 0 0 40px rgba(68, 128, 255, 0.5), 0 0 60px rgba(68, 128, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(68, 128, 255, 0.5), 0 0 20px rgba(68, 128, 255, 0.5), 0 0 30px rgba(68, 128, 255, 0.5);
+    }
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px rgba(68, 128, 255, 0.5), 0 0 20px rgba(68, 128, 255, 0.5), 0 0 30px rgba(68, 128, 255, 0.5);
+  }
+  
+  .task-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    animation: pulse 1s infinite alternate;
+  }
+  
+  .task-item.remove {
+    animation: slideOut 0.5s ease forwards;
+  }
+  
+  
+  .complete {
+    text-decoration: line-through;
+    color: #000000;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  
